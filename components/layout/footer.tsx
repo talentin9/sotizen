@@ -11,16 +11,16 @@ const Footer = () => {
     ]
     return (
         <footer className='w-full px-8 sm:px-12 md:px-16 lg:px-20 xl:px-24 py-10 bg-gray-100 text-gray-500 space-y-8'>
-          <div className='space-y-3'>
+          <div className='space-y-5'>
             <div className='space-x-10'>
               {
                 footer.map(([name, href], i) => <Link href={href} key={i} className='hover:text-gray-900'>{name}</Link>)
               }
             </div>
-            <div className='space-x-5 flex items-center'>
-              <FontAwesomeIcon icon={faFacebook} className='w-4 h-4 border-r border-gray-400 pr-5 hover:text-gray-900' />
-              <FontAwesomeIcon icon={faInstagram} className='w-4 h-4 border-r border-gray-400 pr-5 hover:text-gray-900' />
-              <FontAwesomeIcon icon={faXTwitter} className='w-4 h-4 border-r border-gray-400 pr-5 hover:text-gray-900' />
+            <div className='space-x-10 flex items-center'>
+              <FontAwesomeIcon icon={faFacebook} className='w-5 h-5 hover:text-gray-900' />
+              <FontAwesomeIcon icon={faInstagram} className='w-5 h-5 hover:text-gray-900' />
+              <FontAwesomeIcon icon={faXTwitter} className='w-5 h-5 hover:text-gray-900' />
               <Link href='mailto:help@sotizen.kr' className='hover:text-gray-900'>help@sotizen.kr</Link>
             </div>
           </div>

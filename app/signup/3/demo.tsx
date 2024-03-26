@@ -1,4 +1,6 @@
 'use client'
+import { faMobileButton, faMobileScreenButton } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { NextPage } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -15,8 +17,7 @@ const Demo: NextPage = () => {
               <div className='text-center space-y-3'>
                 <h1 className='text-3xl font-bold'>본인인증하기</h1>
                 <div>
-                  <input type="checkbox" name='cer' id='cer' className='hidden' />
-                  <label htmlFor='cer' className='text-xl font-medium cursor-pointer text-gray-700 hover:text-blue-600 hover:underline'>본인인증은 왜 해야 하나요?</label>
+                  <FontAwesomeIcon icon={faMobileScreenButton} className='w-20' />
                 </div>
               </div>
             </div>

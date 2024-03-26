@@ -9,7 +9,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='ko'>
-      <body>
+      <body className='font-regular'>
         <NavBar />
         <div className='pt-16 px-8 sm:px-12 md:px-16 lg:px-20 xl:px-24'>{children}</div>
         <Footer />
