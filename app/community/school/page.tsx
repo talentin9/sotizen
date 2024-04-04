@@ -4,16 +4,16 @@ import { Metadata, NextPage } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: '커뮤니티',
+  title: '인천공항중학교',
 }
 
-const Local: NextPage = () => {
+const School: NextPage = () => {
   return (
     <div className='py-8 space-y-10'>
       <header className='flex space-x-8'>
-        <h1 className='font-black text-3xl'>전체</h1>
+        <Link href='/community/local' className='font-black text-3xl opacity-40'>전체</Link>
         <div className='border-l' />
-        <Link href='/community/school' className='font-black text-3xl text-black opacity-40'>인천공항중학교</Link>
+        <h1 className='font-black text-3xl text-black'>인천공항중학교</h1>
       </header>
       <div className='relative'>
         <FontAwesomeIcon icon={faMagnifyingGlass} className='w-5 h-5 text-black opacity-40 absolute flex items-center inset-y-0 left-0 ml-4 mt-3' />
@@ -45,4 +45,4 @@ const Local: NextPage = () => {
   )
 }
 
-export default Local
+export default School
