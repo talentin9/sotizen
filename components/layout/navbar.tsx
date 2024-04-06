@@ -7,7 +7,8 @@ const NavBar = () => {
     const navigation = [
       ['/', '홈'],
       ['/community/local', '커뮤니티'],
-      ['/planner', '플래너']
+      ['/planner', '플래너'],
+      ['/mypage', '마이페이지'],
     ]
     return (
         <header className='fixed w-full bg-white h-16 px-8 sm:px-12 md:px-16 lg:px-20 xl:px-24 border-b shadow flex items-center justify-between text-lg text-gray-500 z-50'>
@@ -22,13 +23,7 @@ const NavBar = () => {
             </nav>
           </div>
           <div>
-            <Link href='/user' className='space-x-3 items-center lg:flex hidden'>
-              <div className='w-8 h-8 rounded-full bg-black' />
-              <div><span className='underline hover:text-cyellow'>임준석</span>님</div>
-            </Link>
-            <div>
-              <FontAwesomeIcon icon={faBars} className='w-5 h-5 block lg:hidden' />
-            </div>
+            <FontAwesomeIcon icon={faBars} className='w-5 h-5 block lg:hidden' />
           </div>
         </header>
     )

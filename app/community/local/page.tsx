@@ -21,7 +21,7 @@ const Local: NextPage = () => {
       </div>
       <div className='border-b'>
         {
-          [...Array(30)].map((_, i) => (
+          [...Array(100)].map((_, i) => (
             <div key={i} className='border-t py-5 space-y-3'>
               <div>
                 <h1 className='text-3xl font-bold'>Hello</h1>
