@@ -1,0 +1,11 @@
+        <div className='space-y-4'>
+          {
+            [...Array(10)].map((_, i) => (
+              <div className='space-x-5 text-lg flex items-center'>
+                <div className='w-9 h-9 bg-cyellow rounded-full flex items-center justify-center'>{i + 1}</div>
+                <div className='border pl-3 py-2 w-1/2 rounded-md' key={i}>양치하기</div>
+              </div>
+            ))
+          }
+        </div>
+        --------------------- 플래너 ---------------------
