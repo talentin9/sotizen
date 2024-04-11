@@ -14,10 +14,6 @@ const MyPage: NextPage = () => {
         </div>
         <button className='text-lg bg-cyellow hover:bg-dcyellow px-2 py-1 rounded-md'>정보 수정하기</button>
       </header>
-      <div className='space-y-5'>
-        <h1 className='font-bold text-3xl'>월간 계획 달성률</h1>
-        <div></div>
-      </div>
     </div>
   )
 }

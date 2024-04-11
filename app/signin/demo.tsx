@@ -1,9 +1,20 @@
 'use client'
+import Input from '@/components/input'
 import { NextPage } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 
 const Demo: NextPage = () => {
+    const onClick = async () => {
+      const response = await fetch('/www/users', {
+        method: 'POST',
+        body: JSON.stringify({
+          username: 'test',
+          password: 'ayo'
+        })
+      })
+      console.log(await response.json())
+    }
     return (
         <div className='flex flex-col items-center py-20'>
           <div className='space-y-14 w-1/2'>
@@ -11,21 +22,21 @@ const Demo: NextPage = () => {
               <Image src='/img/logo.svg' alt='logo' width={100} height={100} className='w-44' />
               <h1 className='font-bold text-4xl'>로그인</h1>
             </div>
-            <div className='text-xl space-y-5'>
+            <form className='text-xl space-y-5'>
               <div className='space-y-2'>
                 <p>이메일</p>
-                <input type='text' placeholder='이메일 주소를 입력해주세요.' className='border border-gray-300 py-2 px-5 w-full focus:outline-2 focus:outline-cyellow rounded placeholder:text-lg text-lg' />
+                <Input type='text' placeholder='이메일 주소를 입력하세요.' />
               </div>
               <div className='space-y-2'>
                 <p>비밀번호</p>
-                <input type='password' placeholder='비밀번호를 입력해주세요.' className='border border-gray-300 py-2 px-5 w-full focus:outline-2 focus:outline-cyellow rounded placeholder:text-lg text-lg' />
+                <Input type='password' placeholder='비밀번호를 입력하세요.' />
               </div>
-              <button className='text-lg bg-cyellow rounded w-full py-2 text-center font-medium hover:opacity-70 transition-all'>로그인</button>
+              <button onClick={onClick} className='text-lg bg-cyellow rounded w-full py-2 text-center font-medium hover:opacity-70 transition-all'>로그인</button>
               <div className='text-base text-center space-x-3 text-gray-500'>
                 <Link href='/signup' className='hover:text-cyellow hover:underline transition-colors'>회원가입</Link>
                 <Link href='/signin/password' className='hover:text-cyellow hover:underline transition-colors'>비밀번호 찾기</Link>
               </div>
-            </div>
+            </form>
             <div className='space-y-5'>
               <div className='relative'>
                 <div className='border-t absolute w-full' />
