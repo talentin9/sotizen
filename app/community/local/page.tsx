@@ -24,8 +24,8 @@ const Local: NextPage = () => {
           [...Array(100)].map((_, i) => (
             <div key={i} className='border-t py-5 space-y-3'>
               <div>
-                <h1 className='text-3xl font-bold'>Hello</h1>
-                <div className='text-cyellow text-lg'>#hello</div>
+                <h1 className='text-2xl font-medium'>Hello</h1>
+                <div className='text-cyellow'>#hello</div>
               </div>
               <div className='text-gray-400 flex space-x-5'>
                 <div className='flex space-x-2 items-center'>

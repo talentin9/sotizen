@@ -1,5 +1,5 @@
 'use client'
-import Input from '@/components/input'
+import { inputCSS } from '@/components/input'
 import { NextPage } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -25,11 +25,11 @@ const Demo: NextPage = () => {
             <form className='text-xl space-y-5'>
               <div className='space-y-2'>
                 <p>이메일</p>
-                <Input type='text' placeholder='이메일 주소를 입력하세요.' />
+                <input type='text' placeholder='이메일 주소를 입력하세요.' className={inputCSS} />
               </div>
               <div className='space-y-2'>
                 <p>비밀번호</p>
-                <Input type='password' placeholder='비밀번호를 입력하세요.' />
+                <input type='password' placeholder='비밀번호를 입력하세요.' className={inputCSS} />
               </div>
               <button onClick={onClick} className='text-lg bg-cyellow rounded w-full py-2 text-center font-medium hover:opacity-70 transition-all'>로그인</button>
               <div className='text-base text-center space-x-3 text-gray-500'>

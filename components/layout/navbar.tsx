@@ -7,7 +7,6 @@ const NavBar = () => {
     const navigation = [
       ['/', '홈'],
       ['/community/local', '커뮤니티'],
-      ['/planner', '플래너'],
       ['/mypage', '마이페이지'],
     ]
     return (

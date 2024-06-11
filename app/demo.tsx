@@ -157,7 +157,7 @@ const Demo = () => {
               </div>
             </div>
             <div className='w-full p-6 md:p-10 border rounded-md space-y-3 md:space-y-5'>
-              <div className='flex space-x-10'>
+              <div className='space-y-2'>
                 <h1 className='text-2xl md:text-3xl font-black'>급식표</h1>
                 <div className='text-[#FF1C1C] flex space-x-1 md:space-x-2 items-center text-base md:text-lg'>
                   <FontAwesomeIcon icon={faCircleInfo} className='w-3 h-3 md:w-5 md:h-5' />

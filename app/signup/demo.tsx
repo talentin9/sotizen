@@ -30,12 +30,14 @@ const Demo: NextPage = () => {
     if(isLoading || id == '' || email == '' || password == '' || rePassword == '') return
     try {
       setIsLoading(true)
-      const credentials = await createUserWithEmailAndPassword(auth, email, password)
-      console.log(credentials.user)
-      await updateProfile(credentials.user, {
-        displayName: id
-      })
-      router.push('/')
+      if(password == rePassword) {
+        const credentials = await createUserWithEmailAndPassword(auth, email, password)
+        await updateProfile(credentials.user, {
+          displayName: id
+        })
+        router.push('/')
+      }
+      else {}
     }
     catch(e) {}
     finally {
