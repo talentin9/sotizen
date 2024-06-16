@@ -19,6 +19,9 @@ const Local: NextPage = () => {
         <FontAwesomeIcon icon={faMagnifyingGlass} className='w-5 h-5 text-black opacity-40 absolute flex items-center inset-y-0 left-0 ml-4 mt-3' />
         <input type='text' className='w-2/5 h-12 border-none rounded-full bg-black bg-opacity-10 pl-12 text-black placeholder-text-opacity-40 text-lg' placeholder='검색어나 태그 검색' />
       </div>
+      <div>
+        <button className='bg-cyellow px-5 py-2 rounded-md hover:bg-dcyellow'>글쓰기</button>
+      </div>
       <div className='border-b'>
         {
           [...Array(100)].map((_, i) => (
